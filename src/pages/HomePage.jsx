@@ -261,13 +261,20 @@ export default function HomePage() {
           <div>
             <h3 className="text-yellow-300 text-xl font-bold mb-4">Follow Us</h3>
             <ul className="space-y-2">
-              {[ 'Twitter', 'LinkedIn'].map((social) => (
-                <li key={social}>
-                  <a href="#" className="opacity-80 hover:opacity-100 transition-opacity">
-                    {social}
-                  </a>
+            {[
+                { name: 'Twitter', url: 'https://x.com/antugrow' },
+                { name: 'LinkedIn', url: 'https://www.linkedin.com/company/antugrow/' }
+            ].map((social) => (
+                <li key={social.name}>
+                <a
+                    href={social.url}
+                    className="opacity-80 hover:opacity-100 transition-opacity"
+                    target="_blank"
+                >
+                    {social.name}
+                </a>
                 </li>
-              ))}
+            ))}
             </ul>
           </div>
         </div>
