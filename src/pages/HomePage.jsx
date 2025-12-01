@@ -1,8 +1,10 @@
-import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useState } from "react";
+import { User, DollarSign, CheckCircle } from "lucide-react";
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [selected, setSelected] = useState(null);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -75,7 +77,7 @@ export default function HomePage() {
         <section
         id="home"
         className="relative bg-cover bg-center bg-no-repeat min-h-screen flex items-center justify-center px-6 py-20 mt-16"
-        style={{ backgroundImage: "url('public/daniel-kawed-9f_eJeULtSY-unsplash.jpg')" }}
+        style={{ backgroundImage: "url('/daniel-kawed-9f_eJeULtSY-unsplash.jpg')" }}
         >
         <div className="absolute inset-0 pointer-events-none">
             <div className="absolute inset-0 bg-black opacity-60"></div>
@@ -148,18 +150,84 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="py-20 px-6 bg-gradient-to-br from-green-800 to-green-900 text-white text-center">
-        <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Farm?</h2>
+      <section id="contact" className="py-20 px-6 bg-gray-200 text-black text-center">
+        <h2 className="text-4xl font-bold mb-4">Ready to Transform Your <span className='text-green-700'>Farming Journey?</span></h2>
         <p className="text-xl mb-8 opacity-90">
           Join thousands of farmers building their future with Antugrow
         </p>
+    <div className="bg-white m-2 p-8 rounded-3xl shadow-lg flex flex-col items-center gap-6 max-w-xl mx-auto">
+      <h2 className="text-3xl font-bold">Join Our Waitlist</h2>
+
+      <p className="text-gray-600 leading-normal text-center">
+        Be among the first to experience the Antugrow Platform.
+        Get early access and exclusive updates.
+      </p>
+
+      
+      <div className="w-full">
+        <span className="text-xl font-semibold">I am a:</span>
+
+        <div className="flex gap-4 mt-4">
+
+         
+          <button
+            onClick={() => setSelected("farmer")}
+            className={`w-full flex items-center justify-between px-5 py-3 rounded-xl border transition-all
+              ${selected === "farmer" ? "border-green-500 bg-green-50" : "border-gray-300 bg-white"}
+              hover:shadow-lg hover:scale-105`}
+          >
+            <div className="flex items-center gap-2">
+              <User className="w-5 h-5 text-green-700" />
+              <span className="font-medium">Farmer</span>
+            </div>
+
+            {selected === "farmer" && (
+              <CheckCircle className="w-6 h-6 text-green-500" />
+            )}
+          </button>
+
+          
+          <button
+            onClick={() => setSelected("lender")}
+            className={`w-full flex items-center justify-between px-5 py-3 rounded-xl border transition-all
+              ${selected === "lender" ? "border-green-500 bg-green-50" : "border-gray-300 bg-white"}
+              hover:shadow-lg hover:scale-105`}
+          >
+            <div className="flex items-center gap-2">
+              <DollarSign className="w-5 h-5 text-green-700" />
+              <span className="font-medium">Lender</span>
+            </div>
+
+            {selected === "lender" && (
+              <CheckCircle className="w-6 h-6 text-green-500" />
+            )}
+          </button>
+
+        </div>
+      </div>
+
+      
+      <div className="flex flex-col gap-3 w-full">
+        <label htmlFor="email" className="font-semibold">Email Address</label>
+
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email address"
+          className="border rounded-xl p-3 focus:outline-none focus:border-green-500"
+        />
+
         <button className="bg-yellow-400 text-green-800 px-10 py-4 rounded-full font-bold text-lg hover:scale-105 hover:shadow-2xl transition-all">
           Join Us
         </button>
+      </div>
+    </div>
+
+
       </section>
 
       {/* Footer */}
-      <footer className="bg-green-950 text-white py-12 px-6 min-h-[80vh">
+      <footer className="bg-green-900 text-white py-12 px-6 min-h-[80vh">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-9 mb-8">
             <a href="home">
                 <img src="/logo-dark-removebg-preview.png" alt="Antugrow Logo" className='w-25 h-25' />
