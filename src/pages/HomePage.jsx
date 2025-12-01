@@ -229,9 +229,7 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="bg-green-900 text-white py-12 px-6 min-h-[80vh">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-9 mb-8">
-            <a href="home">
                 <img src="/logo-dark-removebg-preview.png" alt="Antugrow Logo" className='w-25 h-25' />
-            </a>
           <div>
             <h3 className="text-yellow-300 text-xl font-bold mb-4">About Antugrow</h3>
             <p className="opacity-80">
