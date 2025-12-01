@@ -15,7 +15,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="">
       <header className="fixed top-0 w-full z-50 bg-gradient-to-r from-green-900 to-green-500 shadow-lg">
         <nav className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
