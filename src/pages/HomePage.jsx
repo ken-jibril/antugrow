@@ -16,7 +16,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-      <header className="fixed top-0 w-full z-50 bg-gradient-to-r from-green-700 to-green-500 shadow-lg">
+      <header className="fixed top-0 w-full z-50 bg-gradient-to-r from-green-900 to-green-500 shadow-lg">
         <nav className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <a href="#" className="text-3xl font-bold text-white flex items-center gap-2">
