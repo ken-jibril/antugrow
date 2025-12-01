@@ -213,11 +213,11 @@ export default function HomePage() {
         <input
           type="email"
           id="email"
-          placeholder="Enter your email address"
-          className="border rounded-xl p-3 focus:outline-none focus:border-green-500"
+          placeholder="example@gmail.com"
+          className="border border-gray-300 rounded-xl p-3 focus:outline-none focus:border-green-500"
         />
 
-        <button className="bg-yellow-400 text-green-800 px-10 py-4 rounded-full font-bold text-lg hover:scale-105 hover:shadow-2xl transition-all">
+        <button className="bg-yellow-400 text-green-800 px-10 py-4 rounded-full font-bold text-lg hover:scale-101 hover:shadow-lg transition-all">
           Join Us
         </button>
       </div>
