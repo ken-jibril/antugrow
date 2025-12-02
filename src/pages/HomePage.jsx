@@ -31,7 +31,7 @@ export default function HomePage() {
                   className="w-15 h-15 rounded-xl text-white"
                 />
               </span>
-              <span className='text-2xl'>Antugrow</span>
+              <span className='text-xl sm:text-xl md:text-2xl'>Antugrow</span>
             </a>
 
             {/* Desktop Menu */}
