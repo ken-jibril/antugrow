@@ -118,7 +118,11 @@ export default function HomePage() {
                 alt="Farmer using Antugrow app"
                 className="rounded-2xl shadow-xl w-full max-w-md"
               />
-              <p className='text-xl sm:text-xl md:text-2xl'>Farmer using Antugrow app</p>
+              <p className='text-xl sm:text-xl md:text-2xl'>Farmer using 
+                <span className="text-blue-600 hover:text-blue-700 hover:border-b-2 transition-transform duration-300">
+                  <a href="https://antugrow.com/" target="_blank" rel="noopener noreferrer">Antugrow-Farm Advisor</a>
+                  </span>
+              </p>
             </div>
 
             {/* Text description */}
