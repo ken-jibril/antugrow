@@ -1,6 +1,9 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from "react";
 import { User, DollarSign, CheckCircle } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -254,24 +257,24 @@ export default function HomePage() {
           <div>
             <h3 className="text-yellow-300 text-xl font-bold mb-4">Contact Us</h3>
             <ul className="space-y-2 opacity-80">
-              <li>📧 info@antugrow.com</li>
+              <li>📧<a href="mailto:contact@antugrow.com" className='hover:text-green-300'>contact@antugrow.com</a></li>
               <li>🌍 Nairobi, Kenya</li>
             </ul>
           </div>
           <div>
             <h3 className="text-yellow-300 text-xl font-bold mb-4">Follow Us</h3>
-            <ul className="space-y-2">
+            <ul className="space-x-3 flex">
             {[
-                { name: 'Twitter', url: 'https://x.com/antugrow' },
-                { name: 'LinkedIn', url: 'https://www.linkedin.com/company/antugrow/' }
-            ].map((social) => (
-                <li key={social.name}>
+                { icon: <FaXTwitter className='text-2xl hover:scale-105 shadow-lg '/>, url: 'https://x.com/antugrow', name: 'X (Twitter)' },
+                { icon: <FaLinkedin className='text-2xl hover:text-blue-400 hover:scale-105 shadow-lg'/>, url: 'https://www.linkedin.com/company/antugrow/', name: 'LinkedIn' },
+            ].map((feature, idx,) => (
+                <li key={idx} className="flex items-center gap-3">
                 <a
-                    href={social.url}
+                    href={feature.url}
                     className="opacity-80 hover:opacity-100 transition-opacity"
                     target="_blank"
                 >
-                    {social.name}
+                    {feature.icon}
                 </a>
                 </li>
             ))}
