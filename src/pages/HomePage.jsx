@@ -112,12 +112,13 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             
             {/* GIF or Animation */}
-            <div className="flex justify-center">
+            <div className="flex justify-center flex-col items-center gap-6">
               <img 
-                src="/farmers-gif.gif" 
+                src="/public/gnim-zabdiel-mignake-y8B7E_LlfFg-unsplash.jpg" 
                 alt="Farmer using Antugrow app"
                 className="rounded-2xl shadow-xl w-full max-w-md"
               />
+              <p className='text-xl sm:text-xl md:text-2xl'>Farmer using Antugrow app</p>
             </div>
 
             {/* Text description */}
@@ -161,14 +162,14 @@ export default function HomePage() {
             </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <img src="/screenshot1.png" alt="Dashboard" className="rounded-xl shadow-lg" />
+              <img src="/Antugrow Dashboard.png" alt="Dashboard" className="rounded-xl shadow-lg" />
               <img src="/screenshot2.png" alt="Farm Records" className="rounded-xl shadow-lg" />
-              <img src="/screenshot3.png" alt="Loan Page" className="rounded-xl shadow-lg" />
+              <img src="/public/Info.antugrow .png" alt="Loan Page" className="rounded-xl shadow-lg" />
             </div>
           </div>
         </section>
 
-              {/* Achievements / Wins Section */}
+              {/* Achievements / Wins Section
       <section className="py-16 bg-gray-300">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -191,10 +192,10 @@ export default function HomePage() {
           </div>
 
         </div>
-      </section>
+      </section> */}
 
       {/* Features Section */}
-      <section id="features" className="py-20 px-6 bg-gray-100">
+      <section id="features" className="py-20 px-6 bg-gray-200">
         <h2 className="text-4xl font-bold text-center text-green-700 mb-12">
           Why Choose Antugrow?
         </h2>
