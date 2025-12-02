@@ -31,12 +31,12 @@ export default function HomePage() {
                   className="w-15 h-15 rounded-xl text-white"
                 />
               </span>
-              <span className='text-xl sm:text-xl md:text-2xl'>Antugrow</span>
+              <span className='text-xl sm:text-xl md:text-2xl font-medium'>Antugrow</span>
             </a>
 
             {/* Desktop Menu */}
             <ul className="hidden md:flex gap-8">
-              {[ 'Features', 'Contact'].map((item) => (
+              {['About Us', 'Features', 'Contact',].map((item) => (
                 <li key={item}>
                   <button
                     onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
@@ -61,7 +61,7 @@ export default function HomePage() {
           {/* Mobile Menu */}
           {isMenuOpen && (
             <ul className="md:hidden mt-4 pb-4 flex flex-col gap-4">
-              {[ 'Features', 'Contact'].map((item) => (
+              {['About Us', 'Features', 'Contact'].map((item) => (
                 <li key={item}>
                   <button
                     onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
@@ -102,6 +102,96 @@ export default function HomePage() {
         </div>
         </section>
 
+        
+                {/* What Antugrow Does (Media Showcase) */}
+        <section id="about-antugrow" className="py-20 px-6 bg-white">
+          <h2 className="text-4xl font-bold text-center text-green-700 mb-12">
+            What Antugrow Does
+          </h2>
+
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            
+            {/* GIF or Animation */}
+            <div className="flex justify-center">
+              <img 
+                src="/farmers-gif.gif" 
+                alt="Farmer using Antugrow app"
+                className="rounded-2xl shadow-xl w-full max-w-md"
+              />
+            </div>
+
+            {/* Text description */}
+            <div>
+              <h3 className="text-2xl font-bold text-green-700 mb-4">
+                Empowering Farmers Through Smart Credit Access
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Antugrow allows farmers to build a verifiable, on-chain credit score 
+                based on actual farm performance — no traditional collateral needed.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                By using satellite data, digital harvest recording, and blockchain 
+                technology, we help farmers unlock financing that improves productivity 
+                and drives sustainable growth.
+              </p>
+            </div>
+          </div>
+
+          {/* Video Section */}
+          <div className="mt-16 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-center text-green-700 mb-6">
+              Watch How It Works
+            </h3>
+            <div className="aspect-w-16 aspect-h-9">
+              <iframe
+                className="w-full h-full rounded-2xl shadow-xl"
+                src="https://www.youtube.com/embed/VIDEO_ID"
+                title="How Antugrow Works"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+
+          {/* Screenshot Gallery */}
+          <div className="mt-16 max-w-6xl mx-auto">
+            <h3 className="text-2xl font-bold text-center text-green-700 mb-6">
+              Platform Preview
+            </h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <img src="/screenshot1.png" alt="Dashboard" className="rounded-xl shadow-lg" />
+              <img src="/screenshot2.png" alt="Farm Records" className="rounded-xl shadow-lg" />
+              <img src="/screenshot3.png" alt="Loan Page" className="rounded-xl shadow-lg" />
+            </div>
+          </div>
+        </section>
+
+              {/* Achievements / Wins Section */}
+      <section className="py-16 bg-gray-300">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+            Our Impact & Achievements
+          </h2>
+
+          <p className="text-gray-00 max-w-2xl">
+            AntuGrow proudly co-organized the 2024 AgriTech Hackathon — bringing 
+            together innovators, developers, and agricultural experts to build 
+            solutions that directly empower farmers across Africa.
+          </p>
+
+          <div className="mt-10">
+            <img
+              src="/KEV_5029.jpg"
+              alt="AntuGrow co-organizing AgriTech Hackathon"
+              className="rounded-xl shadow-lg w-full object-cover"
+            />
+          </div>
+
+        </div>
+      </section>
 
       {/* Features Section */}
       <section id="features" className="py-20 px-6 bg-gray-100">
@@ -151,6 +241,7 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
 
       {/* CTA Section */}
       <section id="contact" className="py-20 px-6 bg-gray-200 text-black text-center">
@@ -242,7 +333,7 @@ export default function HomePage() {
           <div>
             <h3 className="text-yellow-300 text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {[ 'Features', 'Contact Us'].map((link) => (
+              {['About Us', 'Features', 'Contact Us'].map((link) => (
                 <li key={link}>
                   <button
                     onClick={() => scrollToSection(link.toLowerCase().replace(' ', '-'))}
